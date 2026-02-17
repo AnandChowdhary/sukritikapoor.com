@@ -6,3 +6,7 @@ export function formatDate(date: Date | undefined): string {
     day: "numeric",
   });
 }
+
+export function toISODate(date: Date): string {
+  return date.toISOString().split("T")[0];
+}

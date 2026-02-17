@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { bookCovers } from "../../data/book-covers";
 
 export async function getStaticPaths() {
   const workEntries = await getCollection("work");
@@ -14,37 +15,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const isEditing = entry.id === "editing";
-
-const bookCoverAltText: Record<string, string> = {
-  book1: "The Civil War Visual Encyclopedia by DK Smithsonian",
-  book2: "Super Simple Physics by DK",
-  book3: "Eyewitness Forensic Science by DK",
-  book4: "Picturepedia by DK Smithsonian",
-  book5: "Mega Bites Dinosaurs by DK",
-  book6: "1000 Inventions and Discoveries by DK",
-  book7: "Super Simple Biology by DK",
-};
-
-const bookCovers = isEditing
-  ? Object.entries(
-      import.meta.glob<{ default: ImageMetadata }>(
-        "../../assets/images/books/*",
-        { eager: true },
-      ),
-    )
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([path, mod]) => {
-        const filename =
-          path
-            .split("/")
-            .pop()
-            ?.replace(/\.\w+$/, "") ?? "";
-        return {
-          src: mod.default,
-          alt: bookCoverAltText[filename] ?? `Book cover: ${filename}`,
-        };
-      })
-  : [];
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>

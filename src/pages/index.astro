@@ -5,7 +5,15 @@ import cardReading from "../assets/images/card-reading.png";
 import cardReachOut from "../assets/images/card-reach-out.png";
 import cardTravel from "../assets/images/card-travel.png";
 
-const cards = [
+const cards: Array<{
+  image: ImageMetadata;
+  imageAlt: string;
+  title: string;
+  description: string;
+  href: string;
+  cta: string;
+  variant?: "default" | "accent";
+}> = [
   {
     image: cardReading,
     imageAlt: "Bookshelf illustration",
@@ -32,7 +40,7 @@ const cards = [
       "After the written word, travel is my second love. Discover all the places I've been to and see the world through my \u{1F4F7}",
     href: "https://www.polarsteps.com/SukritiKapoor",
     cta: "See my experiences",
-    variant: "accent" as const,
+    variant: "accent",
   },
 ];
 ---

@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  currentPath: string;
+  mobile?: boolean;
+}
+
+const { href, label, currentPath, mobile = false } = Astro.props;
+const isActive = currentPath.startsWith(href);
+---
+
+<a
+  href={href}
+  class:list={[
+    "text-base font-sans",
+    mobile && "block py-2",
+    isActive ? "font-semibold" : "hover:text-accent",
+  ]}
+  {...isActive ? { "aria-current": "page" } : {}}
+>
+  {label}
+</a>

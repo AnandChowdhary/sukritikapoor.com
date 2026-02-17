@@ -5,4 +5,6 @@
   --color-accent: #6244bb;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: Inter, system-ui, sans-serif;
+  --width-sidebar: 23%;
+  --spacing-sidebar: 23%;
 }
