@@ -142,9 +142,13 @@ src/
   layouts/
     BaseLayout.astro     # Shared header + sidebar + footer
   components/
-    Sidebar.astro
-    Card.astro
-    Footer.astro
+    ContentDetail.astro   # Shared detail view for poetry/prose
+    ContentListing.astro  # Shared listing view for poetry/prose
+    HomepageCard.astro    # Card component for homepage
+  utils/
+    format-date.ts       # Date formatting helper
+  styles/
+    global.css           # Tailwind v4 config + design tokens
   assets/
     images/              # Book covers, card illustrations
 ```

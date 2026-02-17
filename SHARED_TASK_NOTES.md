@@ -55,6 +55,11 @@
    - Consider adding page transitions for smoother navigation
    - Add structured data (JSON-LD) for better SEO
 
+## Done This Iteration
+- Created `CLAUDE.md` with comprehensive project documentation (tech stack, commands, architecture, content collections, design tokens, conventions)
+- Visual QA re-verified: homepage, work listing, and poetry listing all match reference screenshots
+- All CI checks pass: build (54 pages), astro check (0 errors), prettier (all formatted)
+
 ## Visual QA Status (completed)
 
 - Homepage: Hero, about, cards with images all match original site

@@ -83,19 +83,21 @@ const currentPath = Astro.url.pathname;
       aria-label="Mobile navigation"
     >
       {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              "block py-2 text-base font-sans",
-              currentPath.startsWith(link.href)
-                ? "font-semibold"
-                : "hover:text-accent",
-            ]}
-          >
-            {link.label}
-          </a>
-        ))
+        navLinks.map((link) => {
+          const isActive = currentPath.startsWith(link.href);
+          return (
+            <a
+              href={link.href}
+              class:list={[
+                "block py-2 text-base font-sans",
+                isActive ? "font-semibold" : "hover:text-accent",
+              ]}
+              {...(isActive ? { "aria-current": "page" } : {})}
+            >
+              {link.label}
+            </a>
+          );
+        })
       }
     </nav>
 
@@ -111,19 +113,21 @@ const currentPath = Astro.url.pathname;
           aria-label="Main navigation"
         >
           {
-            navLinks.map((link) => (
-              <a
-                href={link.href}
-                class:list={[
-                  "text-base font-sans",
-                  currentPath.startsWith(link.href)
-                    ? "font-semibold"
-                    : "hover:text-accent",
-                ]}
-              >
-                {link.label}
-              </a>
-            ))
+            navLinks.map((link) => {
+              const isActive = currentPath.startsWith(link.href);
+              return (
+                <a
+                  href={link.href}
+                  class:list={[
+                    "text-base font-sans",
+                    isActive ? "font-semibold" : "hover:text-accent",
+                  ]}
+                  {...(isActive ? { "aria-current": "page" } : {})}
+                >
+                  {link.label}
+                </a>
+              );
+            })
           }
         </nav>
         <a
