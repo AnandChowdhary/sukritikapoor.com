@@ -11,5 +11,8 @@ const proseEntries = await getCollection("prose");
     Prose
   </h1>
 
-  <ContentListing entries={proseEntries} basePath={`${import.meta.env.BASE_URL}prose`} />
+  <ContentListing
+    entries={proseEntries}
+    basePath={`${import.meta.env.BASE_URL}prose`}
+  />
 </BaseLayout>

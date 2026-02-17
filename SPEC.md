@@ -96,7 +96,7 @@ All six work detail pages have full content, including researched copy for Books
 
 ### 4. Poetry (`/poetry`)
 
-A listing page for poetry posts, sorted newest-first. Individual poems are at `/poetry/[slug]`. 24 poems recovered from Archive.org spanning 2012-2024: The Guardian Angel, Epochal Tales, My Immortal, I, Beginnings, Crimson, Little Sparrow, Red, Chasing Dreams, Happyness, Consent, Womanhood, The Thread, Days, Imagination, Idle, Nirvana, Of Pop Rocks and Gobstoppers, Fallacies, Speechless, Havana, Revival, Entangled, I Am a Writer Aren't I.
+A listing page for poetry posts, sorted newest-first. Individual poems are at `/poetry/[slug]`. 28 poems spanning 2012-2024: The Guardian Angel, Epochal Tales, My Immortal, I, Beginnings, Crimson, Little Sparrow, Red, Chasing Dreams, Happyness, Consent, Womanhood, The Thread, Days, Imagination, Idle, Nirvana, Of Pop Rocks and Gobstoppers, Fallacies, Speechless, Havana, Revival, Entangled, I Am a Writer Aren'ttt I, Unfinished, Till Freedom Comes, Imbalance, Veneration.
 
 ### 5. Prose (`/prose`)
 
