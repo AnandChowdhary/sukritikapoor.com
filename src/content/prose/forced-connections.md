@@ -1,0 +1,9 @@
+---
+title: "Forced Connections"
+date: 2019-02-27
+description: "Gone are the days when conversations flowed naturally and connections were formed organically."
+---
+
+Gone are the days when conversations flowed naturally and connections were formed organically, existing within a context — a certain time and place. It is often now that I refer my friends before sending a message to a certain someone, as if they would know them better. Because maybe they do. In the age of social media, one knows the untold about the other person and so 'love at first sight' is just not a possibility anymore. That attraction felt at first sight without knowing anything about the person can be directed in a minute after checking the social media presence and profile of the person. Everything from their background to what they tweeted in the shower two days ago is visible for all to see, and you start feeling like you know this person already. The first judgement has already been made before the first meeting. Confusion about the first move rises as you wonder what more you could read of this seemingly open book. The significant other thus doesn't remain as significant anymore when ten others are similarly waiting in our DMs as we continue to swipe left/right on people, as if commodifying their very existence. Existence solely for the pleasure of being seen by the other, judged and then acted upon.
+
+Now you may argue that this existence is mutual and thus mutually controlled. Only parts one is 'willing' to show to the other are uploaded and the rest, hidden with different layers of visibility. And so to transcend this layer of visibility for a connection that may just be, however out of context, one takes that first leap. Sure, connections aren't as organic anymore, but maybe once formed, they're just as real.

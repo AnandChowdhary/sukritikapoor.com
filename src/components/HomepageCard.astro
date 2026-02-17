@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   image: ImageMetadata;
   imageAlt: string;
@@ -27,11 +29,13 @@ const buttonClass =
 
 <div class="flex flex-col">
   <div class="aspect-square rounded-lg mb-4 overflow-hidden">
-    <img
-      src={image.src}
+    <Image
+      src={image}
       alt={imageAlt}
       class="w-full h-full object-cover"
       loading="lazy"
+      width={512}
+      height={512}
     />
   </div>
   <h3 class="font-serif font-bold text-xl mb-2">{title}</h3>

@@ -72,7 +72,12 @@ const currentPath = Astro.url.pathname;
         navLinks.map((link) => (
           <a
             href={link.href}
-            class="block py-2 text-base font-sans hover:text-accent"
+            class:list={[
+              "block py-2 text-base font-sans",
+              currentPath.startsWith(link.href)
+                ? "font-semibold"
+                : "hover:text-accent",
+            ]}
           >
             {link.label}
           </a>
