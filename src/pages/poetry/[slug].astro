@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentDetail from "../../components/ContentDetail.astro";
+import { buildContentJsonLd } from "../../utils/json-ld";
 
 export async function getStaticPaths() {
   const poetryEntries = await getCollection("poetry");
@@ -13,9 +14,21 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const jsonLd = buildContentJsonLd({
+  type: "CreativeWork",
+  title: entry.data.title,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  date: entry.data.date,
+  description: entry.data.description,
+});
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description}>
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  jsonLd={jsonLd}
+>
   <ContentDetail title={entry.data.title} date={entry.data.date}>
     <Content />
   </ContentDetail>
