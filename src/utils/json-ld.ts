@@ -1,3 +1,27 @@
+export function buildDefaultJsonLd(siteUrl: string): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "Sukriti Kapoor",
+        url: siteUrl,
+        description: "Sukriti Kapoor is a writer and editor.",
+      },
+      {
+        "@type": "Person",
+        name: "Sukriti Kapoor",
+        url: siteUrl,
+        jobTitle: "Writer and Editor",
+        sameAs: [
+          "https://www.linkedin.com/in/sukritikapoor/",
+          "https://www.goodreads.com/user/show/13884498-sukriti-kapoor",
+        ],
+      },
+    ],
+  };
+}
+
 export function buildContentJsonLd(options: {
   type: "CreativeWork" | "Article";
   title: string;

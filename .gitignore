@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# AI agent task notes
+SHARED_TASK_NOTES.md
