@@ -31,17 +31,19 @@ const bookCovers = isEditing
         "../../assets/images/books/*",
         { eager: true },
       ),
-    ).map(([path, mod]) => {
-      const filename =
-        path
-          .split("/")
-          .pop()
-          ?.replace(/\.\w+$/, "") ?? "";
-      return {
-        src: mod.default,
-        alt: bookCoverAltText[filename] ?? `Book cover: ${filename}`,
-      };
-    })
+    )
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([path, mod]) => {
+        const filename =
+          path
+            .split("/")
+            .pop()
+            ?.replace(/\.\w+$/, "") ?? "";
+        return {
+          src: mod.default,
+          alt: bookCoverAltText[filename] ?? `Book cover: ${filename}`,
+        };
+      })
   : [];
 ---
 

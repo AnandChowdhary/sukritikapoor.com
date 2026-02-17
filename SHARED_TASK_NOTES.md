@@ -43,9 +43,19 @@
 
 ## What's Next (in priority order)
 
-1. **Visual QA with agent-browser** — Start dev server and take screenshots to compare against reference screenshots in `screenshots/`. Verify layout, typography, spacing, and colors match the original site.
-2. **Deployment** — Push latest changes and verify GitHub Pages deployment.
-3. **Improvements** – Come up with your own ideas for design, copy, and website improvements.
+1. **Deployment** — Push latest changes and verify GitHub Pages deployment.
+2. **Improvements** – Come up with your own ideas for design, copy, and website improvements.
+
+## Visual QA Status (completed)
+
+- Homepage: Hero, about, cards with images all match original site
+- Work listing: 2-column grid with bold serif headings matches
+- Work detail (editing): Book cover gallery loads correctly
+- Prose listing: Date, title, excerpt layout matches
+- Prose detail (rent): Date, title, body, blockquote styling matches
+- Poetry listing: Date and title list matches
+- Footer: Fixed to show "© 2023" matching live site
+- All CI checks pass: build (53 pages), astro check (0 errors), prettier (all formatted)
 
 ## Key Files
 
