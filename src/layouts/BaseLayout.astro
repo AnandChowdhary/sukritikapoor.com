@@ -12,10 +12,11 @@ const metaDescription =
   description ??
   "Sukriti Kapoor is a writer and editor. Explore her work, poetry, and prose.";
 
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: "/work", label: "Work" },
-  { href: "/poetry", label: "Poetry" },
-  { href: "/prose", label: "Prose" },
+  { href: `${base}work`, label: "Work" },
+  { href: `${base}poetry`, label: "Poetry" },
+  { href: `${base}prose`, label: "Prose" },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -32,8 +33,8 @@ const currentPath = Astro.url.pathname;
     <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
     <title>{pageTitle}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,7 +46,7 @@ const currentPath = Astro.url.pathname;
     <header
       class="lg:hidden flex items-center justify-between px-6 py-4 border-b border-gray-100"
     >
-      <a href="/" class="font-serif font-bold text-2xl">Sukriti Kapoor</a>
+      <a href={base} class="font-serif font-bold text-2xl">Sukriti Kapoor</a>
       <button id="mobile-menu-toggle" class="p-2" aria-label="Toggle menu">
         <svg
           class="w-6 h-6"
@@ -83,7 +84,7 @@ const currentPath = Astro.url.pathname;
       <aside
         class="hidden lg:flex flex-col w-[23%] min-w-[200px] px-8 py-8 min-h-screen fixed left-0 top-0"
       >
-        <a href="/" class="font-serif font-bold text-3xl block"
+        <a href={base} class="font-serif font-bold text-3xl block"
           >Sukriti Kapoor</a
         >
         <nav class="flex flex-col gap-1 mt-auto mb-auto">

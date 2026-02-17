@@ -54,7 +54,7 @@ const categories = [
       categories.map((category) => (
         <div>
           <a
-            href={`/work/${category.slug}`}
+            href={`${import.meta.env.BASE_URL}work/${category.slug}`}
             class="font-serif font-black text-3xl md:text-4xl lg:text-5xl leading-[1.1] underline decoration-2 underline-offset-8 hover:text-accent transition-colors"
           >
             {category.title}

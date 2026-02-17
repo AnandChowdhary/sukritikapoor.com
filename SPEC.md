@@ -1,8 +1,10 @@
 # sukritikapoor.com - Static Site Spec
 
-Sukriti Kapoor's personal portfolio website (writer and editor) was previously a WordPress site that is no longer functional. Rebuild it as a pixel-accurate static site using Astro and Tailwind CSS, using Archive.org screenshots in `screenshots/` and saved HTML content in `content/` as the source of truth for design and copy.
+Sukriti Kapoor's personal portfolio website (writer and editor) is being rebuilt as a pixel-accurate static site using Astro and Tailwind CSS, replacing the original WordPress site.
 
-https://web.archive.org/web/20240619064248/https://sukritikapoor.com/prose/rent/
+**Source of truth for copy and content:** The live WordPress site at https://sukritikapoor.com is now working again and should be used as the primary reference for all text, copy, page structure, and content. Fetch pages directly from sukritikapoor.com to get the correct copy. The Archive.org screenshots in `screenshots/` and saved HTML in `content/` can be used as secondary references.
+
+**Rebuild (GitHub Pages):** https://AnandChowdhary.github.io/sukritikapoor.com/
 
 ## Tech Stack
 
@@ -90,11 +92,11 @@ Individual pages for each work category. Two content pages are already saved:
 - Body text about working at DK / Penguin Random House
 - Gallery of 7 book cover images (4-column grid)
 
-Other work detail pages (Books, Short stories, Print journalism, Proofreading & feature writing) need content — can be placeholder pages for now.
+All six work detail pages have full content, including researched copy for Books, Short stories, Print journalism, and Proofreading & feature writing.
 
 ### 4. Poetry (`/poetry`)
 
-A listing page for poetry posts. Individual poems are at `/poetry/[slug]`.
+A listing page for poetry posts, sorted newest-first. Individual poems are at `/poetry/[slug]`. 24 poems recovered from Archive.org spanning 2012-2024: The Guardian Angel, Epochal Tales, My Immortal, I, Beginnings, Crimson, Little Sparrow, Red, Chasing Dreams, Happyness, Consent, Womanhood, The Thread, Days, Imagination, Idle, Nirvana, Of Pop Rocks and Gobstoppers, Fallacies, Speechless, Havana, Revival, Entangled, I Am a Writer Aren't I.
 
 ### 5. Prose (`/prose`)
 
@@ -159,15 +161,26 @@ description: "Short description for listing pages"
 
 ## Writing New Content
 
-When creating or expanding content (e.g. for work detail pages, prose, or poetry), you may use **web search**, **LinkedIn**, and similar sources to research the author's background, published work, and employers. Use this research to write accurate, up-to-date copy that reflects Sukriti's experience and portfolio.
+The live WordPress site at https://sukritikapoor.com is the authoritative source for all copy. When creating or expanding content:
+
+1. **Always fetch the corresponding page from sukritikapoor.com first** to get the exact copy (e.g., fetch `https://sukritikapoor.com/work/seo/` for the SEO page content)
+2. Copy the text exactly — do not paraphrase or rewrite
+3. For pages not yet on the live site, you may use **web search**, **LinkedIn**, and similar sources to research the author's background, published work, and employers
 
 ## Images
 
-Book cover images from the editing page need to be downloaded from Archive.org and saved locally in `src/assets/images/books/`. Card illustration images (bookshelf, pen, globe) similarly need to be recovered or recreated.
+All images have been downloaded from the original WordPress server and saved locally:
+
+- **Card illustrations:** `src/assets/images/card-reading.png`, `card-reach-out.png`, `card-travel.png` (512x512 each)
+- **Book covers:** 7 images in `src/assets/images/books/book*.j*` for the editing detail page (displayed in 4-column grid)
 
 ## Deployment
 
-Deploy the site to GitHub Pages using GitHub Actions - search for the best way to do this. Then remember to test it in the browser from time to time with the production deployment.
+The site is deployed to GitHub Pages using GitHub Actions (`.github/workflows/deploy.yml`). It uses `withastro/action@v5` for build and `actions/deploy-pages@v4` for deployment. Deploys automatically on push to `main`.
+
+- **Astro config** sets `site: 'https://AnandChowdhary.github.io'` and `base: '/sukritikapoor.com/'`
+- All internal links use `import.meta.env.BASE_URL` to work correctly with the subpath
+- Static assets (favicon, images) are resolved relative to the base URL
 
 ## Key Behaviors
 
@@ -180,7 +193,7 @@ Deploy the site to GitHub Pages using GitHub Actions - search for the best way t
 
 ## Visual QA with `agent-browser`
 
-The `screenshots/` folder contains reference screenshots captured from Archive.org of the original WordPress site. During and after development, use the `agent-browser` CLI to visually compare the rebuild against these references.
+The live site at https://sukritikapoor.com is the primary visual reference. The `screenshots/` folder also contains reference screenshots captured from Archive.org. During and after development, use the `agent-browser` CLI to visually compare the rebuild against the live site and these references.
 
 ### Reference Screenshots
 

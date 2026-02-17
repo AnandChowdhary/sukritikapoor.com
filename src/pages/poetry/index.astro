@@ -11,5 +11,5 @@ const poetryEntries = await getCollection("poetry");
     Poetry
   </h1>
 
-  <ContentListing entries={poetryEntries} basePath="/poetry" />
+  <ContentListing entries={poetryEntries} basePath={`${import.meta.env.BASE_URL}poetry`} />
 </BaseLayout>
