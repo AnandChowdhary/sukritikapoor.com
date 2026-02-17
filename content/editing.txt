@@ -1,0 +1,59 @@
+<div class="wp-block-column is-layout-flow wp-container-core-column-is-layout-2 wp-block-column-is-layout-flow" style="flex-basis:77%">
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"><h1 class="has-text-align-left wp-block-post-title">Editing &amp; publishing</h1></div>
+
+
+
+
+<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+<p>I’ve always had an immense love for books. Growing up, I could always be found in a nook nose-deep into a book, so enthralled by the storyline that I would sometimes feel like I was just another character in the story world. </p>
+
+
+
+<p>So, it only made sense for me to work at a publishing house after I finished my undergrad. I worked as an Assistant Editor at DK, a part of Penguin Random House, in their Knowledge division. Here, I not only learned the full book publishing cycle, but was astonished to know that every page inside a book goes through multiple stages of work and approval before it gets published. A page that I would read through in less than a minute could take us weeks of work!<br><br>In the seven non-fiction educational books that I worked on at DK, I undertook a range of responsibilities – from conceptualising and researching content and book ideas to creating sales pitches, creating detailed editorial briefs, working with designers to plan spreads and edit layouts, and creating and editing manuscripts. While I wasn’t a subject expert on any of the books, I conducted thorough research on a wide variety of subjects from biology and physics to the American Civil War. </p>
+
+
+
+<p>This experience did not only bring me closer to books as a reader and writer but also gave me invaluable insight about working in small and big teams, with in-house and external consultants, authors, proofreaders, and indexers, and also communicating effectively with my seniors and our US and UK team counterparts. </p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-4 wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2021/01/image.jpeg"><img fetchpriority="high" decoding="async" width="810" height="1024" data-id="628" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2021/01/image.jpeg" alt="" class="wp-image-628" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2021/01/image.jpeg 810w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2021/01/image-237x300.jpeg 237w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2021/01/image-768x971.jpeg 768w" sizes="(max-width: 810px) 100vw, 810px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL.jpg"><img decoding="async" width="826" height="1024" data-id="598" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2020/09/912lwcRZ5mL-826x1024.jpg" alt="" class="wp-image-598" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL-826x1024.jpg 826w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL-242x300.jpg 242w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL-768x952.jpg 768w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL-1240x1536.jpg 1240w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/09/912lwcRZ5mL-1653x2048.jpg 1653w" sizes="(max-width: 826px) 100vw, 826px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited.jpg"><img decoding="async" width="1313" height="1750" data-id="769" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited.jpg" alt="" class="wp-image-769" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited.jpg 1313w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited-225x300.jpg 225w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited-768x1024.jpg 768w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/EW_Forensic_Science_Jacket-page-001-scaled-1-edited-1152x1536.jpg 1152w" sizes="(max-width: 1313px) 100vw, 1313px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL.jpg"><img loading="lazy" decoding="async" width="861" height="1024" data-id="594" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2020/06/91eoOTy0vXL-861x1024.jpg" alt="" class="wp-image-594" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL-861x1024.jpg 861w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL-252x300.jpg 252w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL-768x914.jpg 768w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL-1291x1536.jpg 1291w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/06/91eoOTy0vXL-1722x2048.jpg 1722w" sizes="(max-width: 861px) 100vw, 861px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2020/05/0.jpg"><img loading="lazy" decoding="async" width="667" height="1024" data-id="580" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2020/05/0-667x1024.jpg" alt="" class="wp-image-580" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/05/0-667x1024.jpg 667w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/05/0-195x300.jpg 195w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/05/0-768x1180.jpg 768w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/05/0-1000x1536.jpg 1000w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2020/05/0.jpg 1250w" sizes="(max-width: 667px) 100vw, 667px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited.jpg"><img loading="lazy" decoding="async" width="1188" height="1584" data-id="768" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited.jpg" alt="" class="wp-image-768" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited.jpg 1188w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited-225x300.jpg 225w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited-768x1024.jpg 768w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/1000ID_Jacket-page-001-scaled-1-edited-1152x1536.jpg 1152w" sizes="(max-width: 1188px) 100vw, 1188px"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/wp-content/uploads/2023/04/Super_Simple_Biology_Jacket-page-001-edited.jpg"><img loading="lazy" decoding="async" width="1006" height="1341" data-id="770" src="https://web.archive.org/web/20240619065958im_/https://sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2023/04/Super_Simple_Biology_Jacket-page-001-edited.jpg" alt="" class="wp-image-770" srcset="https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/Super_Simple_Biology_Jacket-page-001-edited.jpg 1006w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/Super_Simple_Biology_Jacket-page-001-edited-225x300.jpg 225w, https://web.archive.org/web/20240619065958im_/https://sukritikapoor.com/wp-content/uploads/2023/04/Super_Simple_Biology_Jacket-page-001-edited-768x1024.jpg 768w" sizes="(max-width: 1006px) 100vw, 1006px"></a></figure>
+</figure>
+</div>
+
+<footer class="site-footer wp-block-template-part">
+<div class="wp-block-group has-small-font-size is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-7 wp-block-group-is-layout-flex" style="padding-top:var(--wp--preset--spacing--70)">
+<div class="wp-block-group is-layout-flex wp-container-core-group-is-layout-6 wp-block-group-is-layout-flex">
+<div class="wp-block-group is-content-justification-left is-layout-flex wp-container-core-group-is-layout-5 wp-block-group-is-layout-flex" style="font-weight:700">
+<p>© 2023</p>
+
+
+<p style="font-weight:700;" class="wp-block-site-title"><a href="https://web.archive.org/web/20240619065958/https://sukritikapoor.com/" target="_self" rel="home">Sukriti Kapoor</a></p></div>
+</div>
+</div>
+</footer></div>
