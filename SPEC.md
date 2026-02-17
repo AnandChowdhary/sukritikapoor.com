@@ -157,9 +157,17 @@ description: "Short description for listing pages"
 ---
 ```
 
+## Writing New Content
+
+When creating or expanding content (e.g. for work detail pages, prose, or poetry), you may use **web search**, **LinkedIn**, and similar sources to research the author's background, published work, and employers. Use this research to write accurate, up-to-date copy that reflects Sukriti's experience and portfolio.
+
 ## Images
 
 Book cover images from the editing page need to be downloaded from Archive.org and saved locally in `src/assets/images/books/`. Card illustration images (bookshelf, pen, globe) similarly need to be recovered or recreated.
+
+## Deployment
+
+Deploy the site to GitHub Pages using GitHub Actions - search for the best way to do this. Then remember to test it in the browser from time to time with the production deployment.
 
 ## Key Behaviors
 
@@ -168,6 +176,7 @@ Book cover images from the editing page need to be downloaded from Archive.org a
 - **Minimal JS:** Astro's zero-JS default; only add JS if needed for mobile nav toggle
 - **SEO:** Proper meta tags, Open Graph tags, semantic HTML
 - **Performance:** Optimized images (Astro's built-in image optimization), minimal CSS
+- **CLAUDE.md:** Keep creating the CLAUDE.md file to help future developers understand the codebase, and create Claude skills if need be. Aim to make the project Claude-friendly.
 
 ## Visual QA with `agent-browser`
 
