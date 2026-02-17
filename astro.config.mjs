@@ -1,11 +1,13 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://AnandChowdhary.github.io",
+  site: "https://anandchowdhary.github.io",
   base: "/sukritikapoor.com/",
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

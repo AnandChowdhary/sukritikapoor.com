@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anandchowdhary.github.io/sukritikapoor.com/sitemap-index.xml

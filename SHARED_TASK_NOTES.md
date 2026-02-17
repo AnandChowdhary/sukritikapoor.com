@@ -29,6 +29,8 @@
 - Build passes (54 pages), dev server works at localhost:4321
 - Visual polish pass completed — all pages visually accurate to original
 - GitHub Pages deployment configured (`.github/workflows/deploy.yml`)
+- Sitemap added (`@astrojs/sitemap` integration) — generates `sitemap-index.xml` and `sitemap-0.xml` with all 54 pages
+- `robots.txt` added in `public/` referencing the sitemap
 
 ### Copy Verification Status
 
@@ -48,7 +50,6 @@
 1. **Deployment** — Push latest changes and verify GitHub Pages deployment.
 2. **Improvements** – Ideas for further improvements:
    - Add Open Graph image meta tags (generate or use a default OG image)
-   - Add a sitemap (`@astrojs/sitemap` integration)
    - Add RSS feeds for poetry and prose
    - Improve mobile responsiveness testing (test at various viewport sizes)
    - Consider adding page transitions for smoother navigation
