@@ -17,9 +17,7 @@ leads me through winding alleys of this mind palace.
 
 For here, there is no road not taken, and yet a blinding number of possibilities.
 
-
 I try to get myself to wake up.
-
 
 Wake up from this lucid dream where I am just another brick in the wall
 
@@ -30,7 +28,6 @@ And yet it always seems to fall short of my own indulgences,
 weaved about from the delicate threads of your id
 
 as you move through me like a wave of current.
-
 
 And now again you seem to eviscerate me
 

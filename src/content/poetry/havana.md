@@ -13,7 +13,6 @@ a little peek and a little touch, memories of our younger selves,
 
 our more innocent selves.
 
-
 We still are, you must interject
 
 and I, never one.
@@ -23,7 +22,6 @@ As my fingers reach out for another glass of mortal elixir
 that I pour straight down the carafe.
 
 Always more, love.
-
 
 The gaze of the noon sun seems to shine through the earthly hue
 
@@ -35,7 +33,6 @@ and now your faint silhouette, that my eyes seem to fathom,
 
 till I blink again.
 
-
 We make love to your thoughts
 
 as the blues drone on in the background
@@ -45,7 +42,6 @@ and so does my voice, loud and incoherent,
 almost irreverent for the times and their infliction upon us.
 
 As my mind trails back to the nebulous moment where we seemed to have lost ourselves, and them.
-
 
 And life just seems to jolt me back to this same reality,
 

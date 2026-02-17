@@ -7,7 +7,6 @@ A few boats cross sight
 
 Still, no diamonds on their masts
 
-
 And yet, when the sun touches the horizon,
 
 One never knows which one sinks
@@ -52,4 +51,4 @@ Life, what he may not be able to experience again,
 
 Still feels worth living for.
 
-*– Co-written by Anand Chowdhary*
+_– Co-written by Anand Chowdhary_

@@ -8,7 +8,7 @@ Sometimes I feel like I'm running.
 
 Now of course I imagine running in my head as running through the patches of grassy fields between the old-timey windmills at Zaanse Schans on a moderately windy day on a spring afternoon.
 
-I always thought running away from the problem will be my solution. I grew up waiting, waiting for my chance to pack my bags and bolt out the door before things got too hard, before they reached my boiling point (I had already reached my melting point a couple times before, including a trip to the emergency ward on a random May day), before they reached a point where I no longer knew how to *just deal with them*.
+I always thought running away from the problem will be my solution. I grew up waiting, waiting for my chance to pack my bags and bolt out the door before things got too hard, before they reached my boiling point (I had already reached my melting point a couple times before, including a trip to the emergency ward on a random May day), before they reached a point where I no longer knew how to _just deal with them_.
 
 But it didn't help.
 
@@ -18,4 +18,4 @@ I don't want to sound ungrateful. It did help, at least in some ways. Some days 
 
 So now I'm waiting.
 
-I'm waiting and running at the same time. Waiting till the problem just up and decides to leave one day – *that's it, you're cured now! You'll always be a happy person from now on*. And running till it does. And if you want to find me, I'll be somewhere in a field next to canals and windmills.
+I'm waiting and running at the same time. Waiting till the problem just up and decides to leave one day – _that's it, you're cured now! You'll always be a happy person from now on_. And running till it does. And if you want to find me, I'll be somewhere in a field next to canals and windmills.

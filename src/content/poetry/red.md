@@ -19,16 +19,13 @@ Silent Ink
 
 The dim red shimmers on her papery skin
 
-
 Somewhere a nascent identity descends upon her
 
 And an empty mind is brought back to life
 
-
 A tireless wait till dawn arrives
 
 The sparrow caged with golden strings finds freedom in her ringing wings
-
 
 For love is a distant emotion
 
@@ -37,7 +34,6 @@ A disguised and harrowing devotion
 It is a story she could never write
 
 The scars of which she couldn't hide
-
 
 For red is the holy river that flows on her head
 

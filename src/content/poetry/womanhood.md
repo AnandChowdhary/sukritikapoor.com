@@ -11,11 +11,9 @@ The strength in her back,
 
 And the ego in her mind.
 
-
 What defines a woman –
 
 Not her man, not her plight.
-
 
 Just a drop of blood, once taken, never to be returned
 

@@ -11,7 +11,6 @@ A world full of colouring books,
 
 Silent toys and incoherent noises surrounds her.
 
-
 She opens her eyes and looks up to read
 
 The fuzzy word 'Consent'.

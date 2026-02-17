@@ -5,7 +5,6 @@ date: 2019-09-25
 
 I'm all out of words.
 
-
 Like a wound that has bled dry, leaving its scabs on my knees
 
 with dark broken flesh tearing apart from the sides
@@ -21,7 +20,6 @@ like a wheel that gets stuck in a rut; afraid to spin out to conquer the curve
 or the swing that keeps moving back and forth in my garden out front
 
 with no wind and no push, failing to stop when it faintly brushes against the swamp.
-
 
 Verses have lost their rhythm.
 
@@ -53,7 +51,6 @@ as I fail to articulate my slowing heartbeat
 
 yet again.
 
-
 Yet again, I hold you in contempt
 
 even though my finger stretches out of my clenched fist to point at a faint reflection
@@ -61,6 +58,5 @@ even though my finger stretches out of my clenched fist to point at a faint refl
 of my thinning sense of self
 
 And slowly my mind stops
-
 
 there is but nothing left to say.

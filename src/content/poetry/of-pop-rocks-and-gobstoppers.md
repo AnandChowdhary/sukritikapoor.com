@@ -19,7 +19,6 @@ trying to brighten up the most monotonous of walks,
 
 that I know it's still there.
 
-
 It's whenever I gobble a spoonful of sugar,
 
 and snap hakuna matata to all the lemons that life throws at me,
@@ -29,7 +28,6 @@ trying to build a whole new world with a new exciting point of view,
 that I believe, slightly more, in just how far it'll go,
 
 reminding myself that I must never let it go.
-
 
 And it's every time I slurp up the remains of ramen,
 

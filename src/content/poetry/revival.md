@@ -13,7 +13,6 @@ Or flipping through the pages of an old book that you read back when you were 14
 
 just a little more.
 
-
 As you recount a line or two to me
 
 of an old poem you had once read.
@@ -22,7 +21,6 @@ How you long to read it again, wondering if the rhythm would still hold true
 
 and the verse would read itself, just how Milton meant it
 
-
 And they seem to depict you now, the lines,
 
 as you go over them one more time,
@@ -30,7 +28,6 @@ as you go over them one more time,
 delving deep into the syllables and lifting your voice for effect
 
 and somehow, they begin to describe us.
-
 
 For paradise lost is my paradise regained
 

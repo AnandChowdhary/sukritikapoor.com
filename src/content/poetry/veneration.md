@@ -13,7 +13,6 @@ A thousand arms moved as one, uplifting a candelabrum of flames into the sky
 
 Announcing to the world, their devotion and to her, their declaration
 
-
 There,
 
 She once again stood, facing her decision to be one with the flames

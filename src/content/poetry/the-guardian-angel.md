@@ -7,18 +7,15 @@ A man rummages through the moorlands
 
 For a heart that was stolen long back;
 
-
 She was his first love
 
 The truest, sincerest of them all
-
 
 And hiding in every bush and every bower
 
 In every blooming flower
 
 He sees his Mary, waiting to be his.
-
 
 Two lovers meet at the pink hue of dusk
 
@@ -28,13 +25,11 @@ And Mary's eyes shine as she pines
 
 For their hearts to be forever intertwined
 
-
 But hiding in every bush and every bower
 
 In every blooming flower
 
 He sees his Mary, waiting to be his
-
 
 Yet, as she departs, her clairvoyant heart
 
@@ -44,13 +39,11 @@ As the waves rush by the green tree
 
 They stand forever apart by the banks of the Lee
 
-
 But hiding in every bush and every bower
 
 In every blooming flower
 
 He sees his Mary, waiting to be his.
-
 
 It is often now that he searches for roses
 
@@ -67,7 +60,6 @@ And he embellishes her with the roses he picked
 Lying right there by her graveside
 
 Where she blissfully sleeps beneath the dew
-
 
 And still, hiding in every bush and every bower
 

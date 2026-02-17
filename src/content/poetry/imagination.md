@@ -43,7 +43,6 @@ To know that life is just that dark
 
 And that you're just moving farther from that perfect life you imagined
 
-
 And so I pray that we all forget this scene
 
 Erase it slowly

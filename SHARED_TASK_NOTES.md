@@ -24,7 +24,9 @@
   - Poems span 2012–2024 (28 total, matching live site count)
 - Content collections configured in `src/content.config.ts` (work, poetry, prose)
 - All images downloaded from original WordPress server
-- Build passes (53 pages), dev server works at localhost:4321
+- Homepage card buttons now link to correct URLs (Goodreads, mailto:mail@sukritikapoor.com, Polarsteps) matching live site
+- External card links open in new tabs with `target="_blank" rel="noopener noreferrer"`
+- Build passes (54 pages), dev server works at localhost:4321
 - Visual polish pass completed — all pages visually accurate to original
 - GitHub Pages deployment configured (`.github/workflows/deploy.yml`)
 
@@ -44,7 +46,13 @@
 ## What's Next (in priority order)
 
 1. **Deployment** — Push latest changes and verify GitHub Pages deployment.
-2. **Improvements** – Come up with your own ideas for design, copy, and website improvements.
+2. **Improvements** – Ideas for further improvements:
+   - Add Open Graph image meta tags (generate or use a default OG image)
+   - Add a sitemap (`@astrojs/sitemap` integration)
+   - Add RSS feeds for poetry and prose
+   - Improve mobile responsiveness testing (test at various viewport sizes)
+   - Consider adding page transitions for smoother navigation
+   - Add structured data (JSON-LD) for better SEO
 
 ## Visual QA Status (completed)
 
@@ -55,7 +63,7 @@
 - Prose detail (rent): Date, title, body, blockquote styling matches
 - Poetry listing: Date and title list matches
 - Footer: Fixed to show "© 2023" matching live site
-- All CI checks pass: build (53 pages), astro check (0 errors), prettier (all formatted)
+- All CI checks pass: build (54 pages), astro check (0 errors), prettier (all formatted)
 
 ## Key Files
 

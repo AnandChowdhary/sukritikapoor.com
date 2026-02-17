@@ -11,9 +11,7 @@ A period that longs for completion
 
 Walking fast, yet inching away from absolution.
 
-
 Who am I? And what am I to be?
-
 
 Am 'I' just a syllable, a vowel or a word?
 
@@ -28,7 +26,6 @@ I have no wind to carry me with,
 I have no sunshine to guide my path,
 
 And I have no darkness to face its wrath.
-
 
 Perhaps I am nothing but a hallucination
 
@@ -46,7 +43,6 @@ No, I don't fail to miss a single note
 
 With a ruthless mind I cannot control.
 
-
 Yet there are words I never wrote
 
 Or thoughts I never spoke.
@@ -58,7 +54,6 @@ With repercussions that are meant to last.
 But I am an identity that cannot erase
 
 I can think and I can only create.
-
 
 Am I then a soundless note?
 
@@ -78,7 +73,6 @@ Your life from your purpose and the truth from your act,
 
 A veil of deceit, a thin line of your tact.
 
-
 Who am I then to you, I ask?
 
 Am I an entity that is to go unnoticed?
@@ -88,7 +82,6 @@ Or a face you most despise?
 Maybe I am just a naive poet
 
 Whose work in these words forever remains confined.
-
 
 Am I then to just simply exist?
 
