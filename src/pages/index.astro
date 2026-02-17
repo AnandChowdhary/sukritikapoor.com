@@ -1,16 +1,50 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import cardReading from '../assets/images/card-reading.png';
-import cardReachOut from '../assets/images/card-reach-out.png';
-import cardTravel from '../assets/images/card-travel.png';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomepageCard from "../components/HomepageCard.astro";
+import cardReading from "../assets/images/card-reading.png";
+import cardReachOut from "../assets/images/card-reach-out.png";
+import cardTravel from "../assets/images/card-travel.png";
+
+const cards = [
+  {
+    image: cardReading,
+    imageAlt: "Bookshelf illustration",
+    title: "Reading list",
+    description:
+      "Isn't it nice to lose yourself in a story? Find out all the books I'm currently reading and the ones I've read.",
+    href: "#",
+    cta: "Read on",
+  },
+  {
+    image: cardReachOut,
+    imageAlt: "Pen and paper illustration",
+    title: "Reach out",
+    description:
+      "Liked my work or want to have a chat? Send me an email and perhaps we can meet over a virtual cup of coffee.",
+    href: "mailto:hello@sukritikapoor.com",
+    cta: "Contact me",
+  },
+  {
+    image: cardTravel,
+    imageAlt: "Globe illustration",
+    title: "Travel with me",
+    description:
+      "After the written word, travel is my second love. Discover all the places I've been to and see the world through my \u{1F4F7}",
+    href: "#",
+    cta: "See my experiences",
+    variant: "accent" as const,
+  },
+];
 ---
 
 <BaseLayout>
-  <!-- Hero Section -->
   <section class="flex flex-col justify-center min-h-[70vh] max-w-3xl">
     <p class="text-base mb-3">Hi there!</p>
-    <h1 class="font-serif font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-snug mb-8">
-      I&rsquo;m Sukriti, a writer and editor, and this is my little corner on the web.
+    <h1
+      class="font-serif font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-snug mb-8"
+    >
+      I&rsquo;m Sukriti, a writer and editor, and this is my little corner on
+      the web.
     </h1>
     <div class="flex flex-wrap gap-4">
       <a
@@ -28,62 +62,25 @@ import cardTravel from '../assets/images/card-travel.png';
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="py-16 max-w-4xl">
     <div class="grid md:grid-cols-2 gap-8">
       <p class="text-base leading-relaxed">
-        I'm Sukriti, a writer and editor who breathes, sleeps, and lives for the intricate world of words. I live in the land of windmills and stroopwafels, and love to travel to new countries, explore new cultures, and meet new people.
+        I'm Sukriti, a writer and editor who breathes, sleeps, and lives for the
+        intricate world of words. I live in the land of windmills and
+        stroopwafels, and love to travel to new countries, explore new cultures,
+        and meet new people.
       </p>
       <p class="text-base leading-relaxed">
-        I'm currently working as a content writer at Eurail. I'm also a voracious reader, sometimes like to cook, and am always up for dancing to early 2000s, pop, or Bollywood music.
+        I'm currently working as a content writer at Eurail. I'm also a
+        voracious reader, sometimes like to cook, and am always up for dancing
+        to early 2000s, pop, or Bollywood music.
       </p>
     </div>
   </section>
 
-  <!-- Three Cards Section -->
   <section class="py-8">
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Reading List Card -->
-      <div class="flex flex-col">
-        <div class="aspect-square rounded-lg mb-4 overflow-hidden">
-          <img src={cardReading.src} alt="Bookshelf illustration" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="font-serif font-bold text-xl mb-2">Reading list</h3>
-        <p class="text-sm leading-relaxed mb-4 flex-1">
-          Isn't it nice to lose yourself in a story? Find out all the books I'm currently reading and the ones I've read.
-        </p>
-        <a href="#" class="inline-block bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium self-start hover:bg-gray-800 transition-colors">
-          Read on
-        </a>
-      </div>
-
-      <!-- Reach Out Card -->
-      <div class="flex flex-col">
-        <div class="aspect-square rounded-lg mb-4 overflow-hidden">
-          <img src={cardReachOut.src} alt="Pen and paper illustration" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="font-serif font-bold text-xl mb-2">Reach out</h3>
-        <p class="text-sm leading-relaxed mb-4 flex-1">
-          Liked my work or want to have a chat? Send me an email and perhaps we can meet over a virtual cup of coffee.
-        </p>
-        <a href="mailto:hello@sukritikapoor.com" class="inline-block bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium self-start hover:bg-gray-800 transition-colors">
-          Contact me
-        </a>
-      </div>
-
-      <!-- Travel Card -->
-      <div class="flex flex-col">
-        <div class="aspect-square rounded-lg mb-4 overflow-hidden">
-          <img src={cardTravel.src} alt="Globe illustration" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="font-serif font-bold text-xl mb-2">Travel with me</h3>
-        <p class="text-sm leading-relaxed mb-4 flex-1">
-          After the written word, travel is my second love. Discover all the places I've been to and see the world through my &#x1F4F7;
-        </p>
-        <a href="#" class="inline-block bg-accent text-white px-5 py-2.5 rounded-full text-sm font-medium self-start hover:bg-accent/90 transition-colors">
-          See my experiences
-        </a>
-      </div>
+      {cards.map((card) => <HomepageCard {...card} />)}
     </div>
   </section>
 </BaseLayout>

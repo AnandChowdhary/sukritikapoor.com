@@ -1,19 +1,19 @@
 ---
-import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import book1 from '../../assets/images/books/book1.jpeg';
-import book2 from '../../assets/images/books/book2.jpg';
-import book3 from '../../assets/images/books/book3.jpg';
-import book4 from '../../assets/images/books/book4.jpg';
-import book5 from '../../assets/images/books/book5.jpg';
-import book6 from '../../assets/images/books/book6.jpg';
-import book7 from '../../assets/images/books/book7.jpg';
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import book1 from "../../assets/images/books/book1.jpeg";
+import book2 from "../../assets/images/books/book2.jpg";
+import book3 from "../../assets/images/books/book3.jpg";
+import book4 from "../../assets/images/books/book4.jpg";
+import book5 from "../../assets/images/books/book5.jpg";
+import book6 from "../../assets/images/books/book6.jpg";
+import book7 from "../../assets/images/books/book7.jpg";
 
 const bookCovers = [book1, book2, book3, book4, book5, book6, book7];
 
 export async function getStaticPaths() {
-  const workEntries = await getCollection('work');
-  return workEntries.map(entry => ({
+  const workEntries = await getCollection("work");
+  return workEntries.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
   }));
@@ -21,19 +21,28 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const isEditing = entry.id === 'editing';
+const isEditing = entry.id === "editing";
 ---
 
-<BaseLayout title={entry.data.title}>
-  <h1 class="font-serif font-black text-4xl md:text-5xl lg:text-6xl mb-8">{entry.data.title}</h1>
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <h1 class="font-serif font-black text-4xl md:text-5xl lg:text-6xl mb-8">
+    {entry.data.title}
+  </h1>
   <div class="prose prose-lg max-w-none">
     <Content />
   </div>
-  {isEditing && (
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-      {bookCovers.map((book, i) => (
-        <img src={book.src} alt={`Book cover ${i + 1}`} class="w-full rounded shadow-sm" />
-      ))}
-    </div>
-  )}
+  {
+    isEditing && (
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        {bookCovers.map((book, i) => (
+          <img
+            src={book.src}
+            alt={`Book cover ${i + 1}`}
+            class="w-full rounded shadow-sm"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    )
+  }
 </BaseLayout>

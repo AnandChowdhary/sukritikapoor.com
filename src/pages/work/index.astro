@@ -1,51 +1,70 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const categories = [
   {
-    title: 'SEO',
-    slug: 'seo',
-    description: 'From technical tutorial guides to magazine blog articles, I edit and update content to follow optimal SEO practices with measurable results.',
+    title: "SEO",
+    slug: "seo",
+    description:
+      "From technical tutorial guides to magazine blog articles, I edit and update content to follow optimal SEO practices with measurable results.",
   },
   {
-    title: 'Editing & publishing',
-    slug: 'editing',
-    description: 'I worked in non-fiction publishing where I edited 7 books from start to finish ranging from <em>Super Simple Physics</em> to <em>American Civil War</em>.',
+    title: "Editing & publishing",
+    slug: "editing",
+    description:
+      "I worked in non-fiction publishing where I edited 7 books from start to finish ranging from <em>Super Simple Physics</em> to <em>American Civil War</em>.",
   },
   {
-    title: 'Books',
-    slug: 'books',
-    description: 'I self-published my collection of poems, Crimson and Other Poems. It\u2019s softbound, 91-page paperback available on Amazon.',
+    title: "Books",
+    slug: "books",
+    description:
+      "I self-published my collection of poems, Crimson and Other Poems. It\u2019s softbound, 91-page paperback available on Amazon.",
   },
   {
-    title: 'Short stories',
-    slug: 'short-stories',
-    description: 'My short story \u201CThe Seven-Legged Beast\u201D was published in DK\u2019s <em>Birds and Beasts</em> in 2020.',
+    title: "Short stories",
+    slug: "short-stories",
+    description:
+      "My short story \u201CThe Seven-Legged Beast\u201D was published in DK\u2019s <em>Birds and Beasts</em> in 2020.",
   },
   {
-    title: 'Print journalism',
-    slug: 'print-journalism',
-    description: 'At Hindustan Times, I published 11 news stories ranging from the struggles of homeless shelter residents to the success stories of student entrepreneurs.',
+    title: "Print journalism",
+    slug: "print-journalism",
+    description:
+      "At Hindustan Times, I published 11 news stories ranging from the struggles of homeless shelter residents to the success stories of student entrepreneurs.",
   },
   {
-    title: 'Proofreading & feature writing',
-    slug: 'proofreading',
-    description: 'I edited and proofread vocational training textbooks for Unifiers. I also worked on a book pitch and wrote feature articles for their magazine.',
+    title: "Proofreading & feature writing",
+    slug: "proofreading",
+    description:
+      "I edited and proofread vocational training textbooks for Unifiers. I also worked on a book pitch and wrote feature articles for their magazine.",
   },
 ];
 ---
 
-<BaseLayout title="Work">
-  <h1 class="font-serif font-black text-6xl md:text-7xl lg:text-8xl mb-16">Work</h1>
+<BaseLayout
+  title="Work"
+  description="Explore Sukriti Kapoor's work in SEO, editing, publishing, journalism, and more."
+>
+  <h1 class="font-serif font-black text-6xl md:text-7xl lg:text-8xl mb-16">
+    Work
+  </h1>
 
   <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
-    {categories.map(category => (
-      <div>
-        <a href={`/work/${category.slug}`} class="font-serif font-black text-3xl md:text-4xl lg:text-5xl leading-[1.1] underline decoration-2 underline-offset-8 hover:text-accent transition-colors">
-          {category.title}
-        </a>
-        <p class="mt-4 text-base leading-relaxed" set:html={category.description} />
-      </div>
-    ))}
+    {
+      categories.map((category) => (
+        <div>
+          <a
+            href={`/work/${category.slug}`}
+            class="font-serif font-black text-3xl md:text-4xl lg:text-5xl leading-[1.1] underline decoration-2 underline-offset-8 hover:text-accent transition-colors"
+          >
+            {category.title}
+          </a>
+          <p
+            class="mt-4 text-base leading-relaxed"
+            set:html={category.description}
+          />
+        </div>
+      ))
+    }
   </div>
 </BaseLayout>

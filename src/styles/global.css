@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-accent: #6244BB;
+  --color-accent: #6244bb;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: Inter, system-ui, sans-serif;
 }

@@ -225,7 +225,7 @@ Iterate until the rebuilt pages closely match the original screenshots.
 
 ## Out of Scope (for now)
 
-- Reading list page (would need a data source for books)
+- Reading list page (would need a data source for books) https://www.goodreads.com/user/show/13884498-sukriti-kapoor
 - Travel page (would need photo content)
 - Analytics
 - CMS integration

@@ -1,0 +1,48 @@
+---
+interface Props {
+  image: ImageMetadata;
+  imageAlt: string;
+  title: string;
+  description: string;
+  href: string;
+  cta: string;
+  variant?: "default" | "accent";
+}
+
+const {
+  image,
+  imageAlt,
+  title,
+  description,
+  href,
+  cta,
+  variant = "default",
+} = Astro.props;
+
+const buttonClass =
+  variant === "accent"
+    ? "bg-accent text-white hover:bg-accent/90"
+    : "bg-black text-white hover:bg-gray-800";
+---
+
+<div class="flex flex-col">
+  <div class="aspect-square rounded-lg mb-4 overflow-hidden">
+    <img
+      src={image.src}
+      alt={imageAlt}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+  </div>
+  <h3 class="font-serif font-bold text-xl mb-2">{title}</h3>
+  <p class="text-sm leading-relaxed mb-4 flex-1">{description}</p>
+  <a
+    href={href}
+    class:list={[
+      "inline-block px-5 py-2.5 rounded-full text-sm font-medium self-start transition-colors",
+      buttonClass,
+    ]}
+  >
+    {cta}
+  </a>
+</div>

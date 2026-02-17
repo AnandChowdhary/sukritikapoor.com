@@ -11,20 +11,21 @@
   - Editing page includes 7 book cover images in 4-column grid
   - Books, Short stories, Print journalism, Proofreading have placeholder content
 - Prose listing page (`/prose`) and detail page (`/prose/[slug]`) complete
-  - "Rent" post with date (Aug 24, 2023), title, and full body text (5 elements: 3 paragraphs, 1 blockquote, 1 closing paragraph - recovered from Archive.org)
-- Poetry listing page (`/poetry`) and detail page (`/poetry/[slug]`) created (empty, shows "Coming soon.")
+  - "Rent" post with date (Aug 24, 2023), title, and full body text
+- **Poetry section complete** - 24 poems recovered from Archive.org and added as markdown files
+  - Poetry listing page (`/poetry`) shows all poems sorted newest-first
+  - Poetry detail pages (`/poetry/[slug]`) render each poem with date, title, and body
+  - Poems span 2012–2024: The Guardian Angel, Epochal Tales, My Immortal, I, Beginnings, Crimson, Little Sparrow, Red, Chasing Dreams, Happyness, Consent, Womanhood, The Thread, Days, Imagination, Idle, Nirvana, Of Pop Rocks and Gobstoppers, Fallacies, Speechless, Havana, Revival, Entangled, I Am a Writer Aren't I
 - Content collections configured in `src/content.config.ts` (work, poetry, prose)
 - All images downloaded from original WordPress server
-- Build passes (11 pages), dev server works at localhost:4321
-- **Visual polish pass completed** - compared homepage (hero, about, cards), work page, and prose/rent page against reference screenshots. All pages are visually accurate to the original. Hero heading adjusted to `text-[2.75rem]` with `max-w-3xl` to match reference 2-line wrapping.
-- **Dependencies upgraded** - Migrated from Tailwind CSS v3 to v4.1.18. Removed `@astrojs/tailwind` integration and `tailwind.config.mjs`, replaced with `@tailwindcss/vite` plugin and CSS-based config (`src/styles/global.css`). Visually verified all pages are identical after upgrade.
-- **Rent full text recovered** - Fetched complete text from Archive.org. Fixed paragraph 3 ending (was incorrectly transcribed), added blockquote and closing paragraph. Now has all 5 original content elements.
+- Build passes (35 pages), dev server works at localhost:4321
+- Visual polish pass completed - all pages visually accurate to original
 
 ## What's Next (in priority order)
 
-1. **Poetry content** - Poetry listing page is empty. Need to find poetry content from Archive.org.
+1. **New content for work pages** - Use web search, LinkedIn, and similar sources to research and write new content for work detail pages with placeholder content (Books, Short stories, Print journalism, Proofreading). See SPEC.md "Writing New Content".
 
-2. **New content** - Use web search, LinkedIn, and similar sources to research and write new content for work detail pages (e.g. Books, Short stories, Print journalism, Proofreading), prose, or poetry where placeholders or gaps exist. See SPEC.md "Writing New Content".
+2. **Deployment** - Deploy the site to GitHub Pages using GitHub Actions.
 
 ## Key Files
 
@@ -39,6 +40,7 @@
 - `src/pages/poetry/[slug].astro` - poetry detail dynamic route
 - `src/content/work/*.md` - work content (seo, editing, books, short-stories, print-journalism, proofreading)
 - `src/content/prose/rent.md` - "Rent" prose post
+- `src/content/poetry/*.md` - 24 poetry files
 - `src/assets/images/card-*.png` - homepage card illustrations (512x512)
 - `src/assets/images/books/book*.j*` - 7 book cover images for editing page
 - `src/styles/global.css` - Tailwind v4 CSS-based config (design tokens via `@theme`, `@plugin` for typography)
@@ -54,4 +56,3 @@
 - `@tailwindcss/vite` plugin used in `astro.config.mjs` (replaces old `@astrojs/tailwind` integration)
 - Card images source: `sukritikapoordotcom-wordpress.ams301.anandchowdhary.com/wp-content/uploads/2023/04/out-0*.png`
 - Book cover images source: same WordPress domain, various upload paths (see `content/editing.txt`)
-- **Tailwind dev server caching** (may be resolved with v4): When adding new pages with new Tailwind classes, restart the dev server (`pkill -f "astro dev"` then `npm run dev`) so Tailwind picks up the new classes.

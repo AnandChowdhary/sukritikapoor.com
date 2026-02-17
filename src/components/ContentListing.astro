@@ -1,0 +1,57 @@
+---
+interface Entry {
+  id: string;
+  data: {
+    title: string;
+    date?: Date;
+    description?: string;
+  };
+}
+
+interface Props {
+  entries: Entry[];
+  basePath: string;
+}
+
+const { entries, basePath } = Astro.props;
+
+const sortedEntries = [...entries].sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+{
+  sortedEntries.length === 0 ? (
+    <p class="text-gray-500 text-lg">Coming soon.</p>
+  ) : (
+    <div class="space-y-10">
+      {sortedEntries.map((entry) => {
+        const date = entry.data.date ? new Date(entry.data.date) : null;
+        const formattedDate = date
+          ? date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          : "";
+        return (
+          <a href={`${basePath}/${entry.id}`} class="block group">
+            {formattedDate && (
+              <p class="text-accent text-sm mb-1">{formattedDate}</p>
+            )}
+            <h2 class="font-serif font-black text-3xl md:text-4xl lg:text-5xl group-hover:text-accent transition-colors">
+              {entry.data.title}
+            </h2>
+            {entry.data.description && (
+              <p class="mt-2 text-base text-gray-600">
+                {entry.data.description}
+              </p>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  )
+}
