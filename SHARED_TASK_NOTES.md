@@ -34,14 +34,18 @@
 - **Work listing**: Verified (all 6 category titles and descriptions match)
 - **Work detail — SEO**: Verified (body text and all links match)
 - **Work detail — Editing**: Verified (body text matches)
-- **Work detail — Books, Short stories, Print journalism, Proofreading**: Not yet verified against live site (these were researched, not copied from live site)
+- **Work detail — Short stories**: Verified (updated with verbatim copy from live site)
+- **Work detail — Print journalism**: Verified (updated with verbatim copy from live site)
+- **Work detail — Proofreading**: Verified (updated with verbatim copy from live site)
+- **Work detail — Books**: Verified (live site has `/category/books/` listing page, not a work detail page; combined content from both book post pages — Crimson and Other Poems first and second edition)
 - **Poetry**: All 28 poems verified
 - **Prose**: All 15 posts verified (fetched verbatim from live site)
 
 ## What's Next (in priority order)
 
-1. **Verify remaining work detail pages** — Fetch Books, Short stories, Print journalism, Proofreading from live site and verify/update copy.
+1. **Visual QA with agent-browser** — Start dev server and take screenshots to compare against reference screenshots in `screenshots/`. Verify layout, typography, spacing, and colors match the original site.
 2. **Deployment** — Push latest changes and verify GitHub Pages deployment.
+3. **Improvements** – Come up with your own ideas for design, copy, and website improvements.
 
 ## Key Files
 

@@ -1,6 +1,7 @@
 ---
 title: "SEO"
 description: "From technical tutorial guides to magazine blog articles, I edit and update content to follow optimal SEO practices with measurable results."
+order: 1
 ---
 
 I realised the importance of SEO many years ago when I created the first version of my website and tried to search for it on Google and see where it came up in the list. As a content writer, I frequently read about SEO practices and implement them across my web-content career, whether it's writing and editing company blogs or writing webpage content.

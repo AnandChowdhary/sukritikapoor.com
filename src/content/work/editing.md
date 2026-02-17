@@ -1,6 +1,7 @@
 ---
 title: "Editing & publishing"
-description: "I worked in non-fiction publishing where I edited 7 books from start to finish ranging from Super Simple Physics to American Civil War."
+description: "I worked in non-fiction publishing where I edited 7 books from start to finish ranging from <em>Super Simple Physics</em> to <em>American Civil War</em>."
+order: 2
 ---
 
 I've always had an immense love for books. Growing up, I could always be found in a nook nose-deep into a book, so enthralled by the storyline that I would sometimes feel like I was just another character in the story world.

@@ -1,4 +1,6 @@
 ---
+import { formatDate } from "../utils/format-date";
+
 interface Entry {
   id: string;
   data: {
@@ -28,13 +30,7 @@ const sortedEntries = [...entries].sort((a, b) => {
   ) : (
     <div class="space-y-10">
       {sortedEntries.map((entry) => {
-        const formattedDate = entry.data.date
-          ? entry.data.date.toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          : "";
+        const formattedDate = formatDate(entry.data.date);
         return (
           <a href={`${basePath}/${entry.id}`} class="block group">
             {formattedDate && (

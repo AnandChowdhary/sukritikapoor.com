@@ -1,12 +1,13 @@
 ---
 title: "Short stories"
-description: "My short story \"The Seven-Legged Beast\" was published in DK's Birds and Beasts in 2020."
+description: "My short story \"The Seven-Legged Beast\" was published in DK's <em>Birds and Beasts</em> in 2020."
+order: 4
 ---
 
-While working at DK as an Assistant Editor, I got the incredible opportunity to contribute as a writer to one of our own publications. My short story "The Seven-Legged Beast" was published in DK's *[Birds and Beasts](https://www.penguinrandomhouse.com/books/675522/birds-and-beasts-by-dk/)* in 2020.
+My dream of being a published author was fulfilled in 2020 when I got the chance to write a short story for the children's book *Birds and Beasts*, the second installment of a book series published by DK. The series showcases a selection of Indian folktales being retold for the modern reader, drawing inspiration from classic Indian texts and oral and tribal folklore.
 
-*Birds and Beasts* is a beautifully illustrated collection of enchanting tales from India, drawing from classic texts like the Hitopadesha, the Kathasaritsagara, and the Puranas, as well as oral tales from regions across the country — from Ladakh and Assam to Andhra Pradesh and Uttarakhand. The book also features tribal folklore from the Santal and Khasi communities.
+With an aim to bring children closer to the magical wisdom of the often underrepresented Jammu and Kashmir, I dug into old publications about the region until I found an archived copy of *Folk-Tales of Kashmir* by James Hinton Knowles from the 19th century. In the book, I read Knowles' collection of tribal folktales from the region with annotations about the context, and sometimes even differing versions of the same plot based on who was telling the story.
 
-For my story, I drew inspiration from *Folk-Tales of Kashmir* by James Hinton Knowles, a 19th-century collection of Kashmiri folklore. I came across the tale of a mysterious seven-legged beast and was immediately captivated by its strangeness and magic. I reimagined the story for a modern audience while staying true to the spirit of the original folk tale — a beast that appears during a royal procession, leading to a thrilling encounter with a shape-shifting jinn.
+A story about a seven-legged beast caught my attention and I set myself to the task of making the text more concise and reimagining the story to make it more readable, and relatable for our current target audience.
 
-It was a wonderful experience to step into the role of storyteller after spending so much time as an editor, and to contribute to a book that brings India's rich oral traditions to young readers around the world.
+To read the full story, and many others like it, grab your copy on Amazon.

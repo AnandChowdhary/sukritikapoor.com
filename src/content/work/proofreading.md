@@ -1,14 +1,11 @@
 ---
 title: "Proofreading & feature writing"
 description: "I edited and proofread vocational training textbooks for Unifiers. I also worked on a book pitch and wrote feature articles for their magazine."
+order: 6
 ---
 
-During my undergraduate studies, I consulted for Unifiers, a social infrastructure company working at the grassroots level to empower communities through skill development and vocational training across India.
+Fresh out of school, I started freelancing for Unifiers, a social venture that invests in vocational training and education, and creating employment opportunities.
 
-My work at Unifiers was multifaceted. I edited and proofread their vocational training textbooks — manuals designed to teach practical skills to young people in underserved communities. This required careful attention to clarity and accessibility, since the content needed to be understood by readers from diverse educational backgrounds.
+This was the first time that I recognized and monetized my language skills to proofread and edit their vocational training textbooks, which were published for both skill trainers and students. This was my introduction to the world of local and educational publishing. With a very small in-office team and a few freelance authors and editors that they worked with, their workflow was quite simplified – from creating a book pitch with a rough overview of the topic and chapters, to writing the content, proofreading and editing it, and publishing the book.
 
-Beyond proofreading, I wrote feature articles for *Skilled*, Unifiers' magazine. These features told the stories of grassroots entrepreneurs and skilled youth whose lives had been transformed through vocational training. I traveled to meet these individuals, listened to their journeys, and wove their experiences into compelling narratives that showcased the real impact of skill development on the ground.
-
-I also worked on a book pitch for Unifiers, helping them conceptualise a publication that would bring together the organisation's mission, impact stories, and vision for the future of skill development in India.
-
-This experience was deeply rewarding because it combined my love for writing and editing with meaningful social impact. It showed me how the power of words can extend far beyond the page — helping organisations tell their stories and, in turn, helping communities tell theirs.
+Later in my journey at Unifiers, I was also involved in creating a book pitch for a vocational training career guide across different levels of minimum education. I also honed my writing skills by writing feature articles for their magazine Skilled, which came in really handy during my internships at leading news organizations in Delhi.

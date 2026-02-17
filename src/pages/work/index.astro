@@ -1,44 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const categories = [
-  {
-    title: "SEO",
-    slug: "seo",
-    description:
-      "From technical tutorial guides to magazine blog articles, I edit and update content to follow optimal SEO practices with measurable results.",
-  },
-  {
-    title: "Editing & publishing",
-    slug: "editing",
-    description:
-      "I worked in non-fiction publishing where I edited 7 books from start to finish ranging from <em>Super Simple Physics</em> to <em>American Civil War</em>.",
-  },
-  {
-    title: "Books",
-    slug: "books",
-    description:
-      "I self-published my collection of poems, Crimson and Other Poems. It\u2019s softbound, 91-page paperback available on Amazon.",
-  },
-  {
-    title: "Short stories",
-    slug: "short-stories",
-    description:
-      "My short story \u201CThe Seven-Legged Beast\u201D was published in DK\u2019s <em>Birds and Beasts</em> in 2020.",
-  },
-  {
-    title: "Print journalism",
-    slug: "print-journalism",
-    description:
-      "At Hindustan Times, I published 11 news stories ranging from the struggles of homeless shelter residents to the success stories of student entrepreneurs.",
-  },
-  {
-    title: "Proofreading & feature writing",
-    slug: "proofreading",
-    description:
-      "I edited and proofread vocational training textbooks for Unifiers. I also worked on a book pitch and wrote feature articles for their magazine.",
-  },
-];
+const workEntries = await getCollection("work");
+const categories = workEntries.sort(
+  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0),
+);
 ---
 
 <BaseLayout
@@ -54,14 +21,14 @@ const categories = [
       categories.map((category) => (
         <div>
           <a
-            href={`${import.meta.env.BASE_URL}work/${category.slug}`}
+            href={`${import.meta.env.BASE_URL}work/${category.id}`}
             class="font-serif font-black text-3xl md:text-4xl lg:text-5xl leading-[1.1] underline decoration-2 underline-offset-8 hover:text-accent transition-colors"
           >
-            {category.title}
+            {category.data.title}
           </a>
           <p
             class="mt-4 text-base leading-relaxed"
-            set:html={category.description}
+            set:html={category.data.description}
           />
         </div>
       ))

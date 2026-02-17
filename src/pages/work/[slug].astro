@@ -15,13 +15,33 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const isEditing = entry.id === "editing";
 
+const bookCoverAltText: Record<string, string> = {
+  book1: "The Civil War Visual Encyclopedia by DK Smithsonian",
+  book2: "Super Simple Physics by DK",
+  book3: "Eyewitness Forensic Science by DK",
+  book4: "Picturepedia by DK Smithsonian",
+  book5: "Mega Bites Dinosaurs by DK",
+  book6: "1000 Inventions and Discoveries by DK",
+  book7: "Super Simple Biology by DK",
+};
+
 const bookCovers = isEditing
-  ? Object.values(
+  ? Object.entries(
       import.meta.glob<{ default: ImageMetadata }>(
         "../../assets/images/books/*",
         { eager: true },
       ),
-    ).map((mod) => mod.default)
+    ).map(([path, mod]) => {
+      const filename =
+        path
+          .split("/")
+          .pop()
+          ?.replace(/\.\w+$/, "") ?? "";
+      return {
+        src: mod.default,
+        alt: bookCoverAltText[filename] ?? `Book cover: ${filename}`,
+      };
+    })
   : [];
 ---
 
@@ -35,10 +55,10 @@ const bookCovers = isEditing
   {
     isEditing && (
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-        {bookCovers.map((cover, i) => (
+        {bookCovers.map((cover) => (
           <Image
-            src={cover}
-            alt={`Book cover ${i + 1}`}
+            src={cover.src}
+            alt={cover.alt}
             class="w-full rounded shadow-sm"
             loading="lazy"
             width={300}
