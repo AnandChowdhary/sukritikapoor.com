@@ -6,10 +6,10 @@
 - BaseLayout with fixed left sidebar (23% width), mobile hamburger menu, footer
 - Homepage complete with real card images (bookshelf, pen/paper, globe from original site)
 - Work listing page (`/work`) complete: 2-column grid of 6 categories
-- Work detail pages (`/work/[slug]`) complete: all 6 pages with content collections
-  - SEO and Editing have full content from original site
+- Work detail pages (`/work/[slug]`) complete: all 6 pages with full content
+  - SEO and Editing have content from original site
   - Editing page includes 7 book cover images in 4-column grid
-  - Books, Short stories, Print journalism, Proofreading have placeholder content
+  - Books, Short stories, Print journalism, Proofreading now have researched content (written based on web research of Sukriti's background)
 - Prose listing page (`/prose`) and detail page (`/prose/[slug]`) complete
   - "Rent" post with date (Aug 24, 2023), title, and full body text
 - **Poetry section complete** - 24 poems recovered from Archive.org and added as markdown files
@@ -23,9 +23,7 @@
 
 ## What's Next (in priority order)
 
-1. **New content for work pages** - Use web search, LinkedIn, and similar sources to research and write new content for work detail pages with placeholder content (Books, Short stories, Print journalism, Proofreading). See SPEC.md "Writing New Content".
-
-2. **Deployment** - Deploy the site to GitHub Pages using GitHub Actions.
+1. **Deployment** - Deploy the site to GitHub Pages using GitHub Actions. See SPEC.md "Deployment" section.
 
 ## Key Files
 

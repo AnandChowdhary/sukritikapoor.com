@@ -1,15 +1,12 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import book1 from "../../assets/images/books/book1.jpeg";
-import book2 from "../../assets/images/books/book2.jpg";
-import book3 from "../../assets/images/books/book3.jpg";
-import book4 from "../../assets/images/books/book4.jpg";
-import book5 from "../../assets/images/books/book5.jpg";
-import book6 from "../../assets/images/books/book6.jpg";
-import book7 from "../../assets/images/books/book7.jpg";
 
-const bookCovers = [book1, book2, book3, book4, book5, book6, book7];
+const bookCoverGlobs = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/images/books/*",
+  { eager: true },
+);
+const bookCovers = Object.values(bookCoverGlobs).map((mod) => mod.default);
 
 export async function getStaticPaths() {
   const workEntries = await getCollection("work");
