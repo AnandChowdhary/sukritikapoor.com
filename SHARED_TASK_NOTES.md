@@ -15,18 +15,17 @@ The site rebuild is **feature-complete**. All content, pages, and visual design 
 - All CI checks pass: build (54 pages), astro check (0 errors/warnings/hints), prettier (all formatted)
 - GitHub Pages deployment configured (`.github/workflows/deploy.yml`)
 - Sitemap and robots.txt in place
-- OG meta tags (title, description, type) already in BaseLayout
+- OG meta tags (title, description, type, image) in BaseLayout — OG image at `public/og-image.png` (1200x630)
 - RSS feeds for poetry and prose (`/poetry/rss.xml`, `/prose/rss.xml`) with auto-discovery `<link>` tags in `<head>`
 - JSON-LD structured data on all pages:
   - Homepage/default: `WebSite` + `Person` schema (with sameAs links)
   - Poetry detail pages: `CreativeWork` schema (with author, datePublished, description)
   - Prose detail pages: `Article` schema (with author, headline, datePublished, description)
 
-## What's Next (in priority order)
+## What's Next
 
 1. **Deployment** — Push latest changes and verify GitHub Pages deployment works end-to-end.
-2. **Optional improvements** (nice-to-have, not blocking):
-   - Add an OG image (generate or use a default image for social sharing)
+2. The project is considered complete — all features, SEO, visual QA, and CI checks are done.
 
 ## Key Files
 
