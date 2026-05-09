@@ -1,27 +1,5 @@
-# build output
 dist/
-# generated types
-.astro/
-
-# dependencies
 node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
+screenshots/
 .DS_Store
 
-# jetbrains setting folder
-.idea/
-
-# AI agent task notes
-SHARED_TASK_NOTES.md

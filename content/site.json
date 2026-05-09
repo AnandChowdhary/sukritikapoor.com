@@ -1,0 +1,56 @@
+{
+  "title": "Sukriti Kapoor",
+  "description": "Sukriti Kapoor is a writer and editor sharing selected work, poetry, prose, books, and travel.",
+  "nav": [
+    {
+      "label": "Work",
+      "route": "/work/"
+    },
+    {
+      "label": "Poetry",
+      "route": "/poetry/"
+    },
+    {
+      "label": "Prose",
+      "route": "/prose/"
+    }
+  ],
+  "social": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sukritikapoor/"
+    }
+  ],
+  "home": {
+    "eyebrow": "Hi there!",
+    "title": "I'm Sukriti, a writer and editor, and this is my little corner on the web.",
+    "image": "/assets/uploads/2023/03/IMG_2638-1-768x1024.jpg",
+    "intro": [
+      "I'm Sukriti, a writer and editor who breathes, sleeps, and lives for the intricate world of words. I live in the land of windmills and stroopwafels, and love to travel to new countries, explore new cultures, and meet new people.",
+      "I'm currently working as a content writer at Eurail. I'm also a voracious reader, sometimes like to cook, and am always up for dancing to early 2000s, pop, or Bollywood music."
+    ],
+    "cards": [
+      {
+        "title": "Reading list",
+        "text": "Isn't it nice to lose yourself in a story? Find out all the books I'm currently reading and the ones I've read.",
+        "image": "/assets/uploads/2023/04/out-0.png",
+        "cta": "Read on",
+        "url": "https://www.goodreads.com/user/show/13884498-sukriti-kapoor"
+      },
+      {
+        "title": "Reach out",
+        "text": "Liked my work or want to have a chat? Send me an email and perhaps we can meet over a virtual cup of coffee.",
+        "image": "/assets/uploads/2023/04/out-0-4.png",
+        "cta": "Contact me",
+        "url": "mailto:mail@sukritikapoor.com"
+      },
+      {
+        "title": "Travel with me",
+        "text": "After the written word, travel is my second love. Discover all the places I've been to and see the world through my camera.",
+        "image": "/assets/uploads/2023/04/out-0-1.png",
+        "cta": "See my experiences",
+        "url": "https://www.polarsteps.com/SukritiKapoor"
+      }
+    ]
+  }
+}

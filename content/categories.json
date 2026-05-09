@@ -1,0 +1,34 @@
+[
+  {
+    "id": 3,
+    "slug": "books",
+    "name": "Books",
+    "count": 2,
+    "route": "/books/",
+    "legacyRoute": "/category/books/"
+  },
+  {
+    "id": 4,
+    "slug": "poetry",
+    "name": "Poetry",
+    "count": 28,
+    "route": "/poetry/",
+    "legacyRoute": "/category/poetry/"
+  },
+  {
+    "id": 2,
+    "slug": "prose",
+    "name": "Prose",
+    "count": 15,
+    "route": "/prose/",
+    "legacyRoute": "/category/prose/"
+  },
+  {
+    "id": 6,
+    "slug": "work",
+    "name": "Work",
+    "count": 140,
+    "route": "/category/work/",
+    "legacyRoute": "/category/work/"
+  }
+]

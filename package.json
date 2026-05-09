@@ -1,31 +1,10 @@
 {
-  "name": "sukritikapoor.com",
+  "name": "sukritikapoor-static",
+  "private": true,
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check",
-    "format": "prettier --write --plugin=prettier-plugin-astro \"src/**/*.{astro,ts,css}\"",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.1",
-    "rehype-stringify": "^10.0.1",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.2",
-    "tailwindcss": "^4.1.18",
-    "unified": "^11.0.5"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.6",
-    "prettier": "^3.8.1",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.9.3"
+    "import:wordpress": "node scripts/import-wordpress.mjs",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev-server.mjs"
   }
 }
