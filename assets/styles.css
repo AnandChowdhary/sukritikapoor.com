@@ -369,6 +369,12 @@ p {
   padding-left: 1rem;
 }
 
+.source-attribution {
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 40px;
+}
+
 .image-block,
 .image-grid {
   margin: 32px 0;

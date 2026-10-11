@@ -30,7 +30,10 @@ Post body goes here.
 ## Commands
 
 ```sh
+npm ci
+npm run import:substack
 npm run import:wordpress
+npm test
 npm run build
 npm run dev
 ```
@@ -41,8 +44,39 @@ npm run dev
 
 `dev` serves the built site at `http://localhost:4173/`.
 
+## Substack cross-posts
+
+`npm run import:substack` imports the public article bodies from
+[Sukriti's RSS feed](https://sukritikapoor15.substack.com/feed). Imported Markdown
+lives in `content/posts/substack/`, images in `assets/substack/`, and articles
+appear under Prose at `/prose/<substack-slug>/`.
+
+Posts retain their original titles and publication dates, link back to Substack,
+and use the original article URL as their canonical URL. The importer identifies
+posts by their feed GUID or source URL and updates existing imports when the feed
+changes. Edit imported articles on Substack; local changes to their generated
+Markdown will be overwritten on the next sync. Images are cached by their source
+URL, so only new images are downloaded.
+
+The RSS feed contains recent posts, not the entire archive. Once imported, posts
+are kept even after they leave the feed or are removed from Substack. Edits to
+posts outside the feed window are not synced; a future archive backfill would be
+needed to recover articles missed during a long interruption. Only the content
+publicly exposed in the feed is imported, including any previews Substack serves.
+
+`.github/workflows/sync-substack.yml` runs daily at **05:17 UTC**, with a manual
+**Run workflow** option on `main`. It imports, tests, builds, and commits only
+changed posts and images using the built-in `GITHUB_TOKEN`. If an import or build
+fails, it does not commit. If nothing changes, it skips committing and deploying.
+If `main` has branch protection that prevents bot pushes, its rules must allow
+this workflow to push for the automatic sync to work.
+
 ## Deploy
 
 Pushes to `main` deploy automatically through GitHub Pages using `.github/workflows/pages.yml`.
 
 The workflow installs dependencies, runs `npm run build`, and publishes `dist/` as the Pages artifact. `dist/` is generated output and is intentionally not committed.
+
+The Pages workflow is also reusable. After pushing an import commit, the Substack
+workflow calls it with that exact commit, because pushes made using `GITHUB_TOKEN`
+do not trigger other push-based workflows. No personal access token is needed.
