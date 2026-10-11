@@ -58,6 +58,14 @@ changes. Edit imported articles on Substack; local changes to their generated
 Markdown will be overwritten on the next sync. Images are cached by their source
 URL, so only new images are downloaded.
 
+Substack sometimes serves a Cloudflare challenge to GitHub-hosted runners. On an
+HTTP 403, the importer falls back to [Jina Reader](https://r.jina.ai/) to read the
+public feed's article URLs and dates, then each article's visible HTML and metadata.
+This fallback uses no API key, spaces requests to stay within the public reader's
+rate limit, and fails without changing content if the reader cannot fetch an
+article. It introduces a dependency on that public reader's availability when
+direct access to Substack is blocked.
+
 The RSS feed contains recent posts, not the entire archive. Once imported, posts
 are kept even after they leave the feed or are removed from Substack. Edits to
 posts outside the feed window are not synced; a future archive backfill would be

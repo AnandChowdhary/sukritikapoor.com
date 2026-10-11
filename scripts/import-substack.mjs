@@ -8,6 +8,7 @@ import Parser from "rss-parser";
 import TurndownService from "turndown";
 
 export const FEED_URL = "https://sukritikapoor15.substack.com/feed";
+export const READER_URL = "https://r.jina.ai/";
 const IMAGE_TYPES = new Map([
   ["image/jpeg", ".jpg"],
   ["image/png", ".png"],
@@ -26,24 +27,75 @@ function plainText(html) {
   return document.body.textContent.replace(/\s+/g, " ").trim();
 }
 
-async function fetchResponse(url, fetchImpl) {
+async function fetchResponse(url, fetchImpl, headers = {}) {
   for (let attempt = 0; attempt < 3; attempt += 1) {
     try {
       const response = await fetchImpl(url, {
         signal: AbortSignal.timeout(30_000),
-        headers: { "User-Agent": "sukritikapoor.com Substack importer" },
+        headers: { "User-Agent": "sukritikapoor.com Substack importer", ...headers },
       });
       if (response.ok) return response;
       if (attempt < 2 && (response.status === 429 || response.status >= 500)) {
         await response.body?.cancel();
       } else {
-        throw new Error(`Failed to fetch ${url}: HTTP ${response.status}`);
+        const error = new Error(`Failed to fetch ${url}: HTTP ${response.status}`);
+        error.status = response.status;
+        throw error;
       }
     } catch (error) {
       if (attempt === 2 || error.message.startsWith("Failed to fetch")) throw error;
     }
     await setTimeout(1_000 * (attempt + 1));
   }
+}
+
+async function readFeed(fetchImpl, readerIntervalMs) {
+  try {
+    const response = await fetchResponse(FEED_URL, fetchImpl);
+    return await new Parser().parseString(await response.text());
+  } catch (error) {
+    if (error.status !== 403) throw error;
+    console.warn("Substack returned HTTP 403; fetching its public pages through Jina Reader.");
+  }
+
+  // Substack challenges GitHub-hosted runners. The public reader provides the
+  // feed's URLs/dates and the visible article HTML without a login or API key.
+  let lastRequest = 0;
+  const readPage = async (url) => {
+    await setTimeout(Math.max(0, readerIntervalMs - (Date.now() - lastRequest)));
+    lastRequest = Date.now();
+    const response = await fetchResponse(`${READER_URL}${url}`, fetchImpl, { "X-Return-Format": "html" });
+    return parseHTML(await response.text()).document;
+  };
+  const index = await readPage(FEED_URL);
+  const containers = [...index.querySelectorAll("body > div")];
+  const items = [];
+  for (const container of containers) {
+    const link = container.querySelector("a[href]")?.getAttribute("href");
+    const pubDate = container.querySelector("time")?.textContent;
+    if (!link || !pubDate) continue;
+    const url = new URL(link);
+    if (url.origin !== new URL(FEED_URL).origin || !/^\/p\/[a-z0-9][a-z0-9_-]*\/?$/i.test(url.pathname)) {
+      throw new Error(`Unexpected article URL from reader: ${link}`);
+    }
+    const article = await readPage(url.href);
+    const body = article.querySelector(".available-content .body.markup");
+    const title = article.querySelector('meta[property="og:title"]')?.getAttribute("content");
+    const canonical = article.querySelector('link[rel="canonical"]')?.getAttribute("href");
+    if (!body || !title || canonical !== url.href) {
+      throw new Error(`Reader did not return the public article: ${link}`);
+    }
+    items.push({
+      title,
+      link: url.href,
+      guid: url.href,
+      pubDate,
+      content: article.querySelector('meta[property="og:description"]')?.getAttribute("content") || "",
+      "content:encoded": body.innerHTML,
+    });
+  }
+  if (!items.length) throw new Error("Reader returned no valid feed entries");
+  return { items };
 }
 
 async function entries(dir) {
@@ -173,9 +225,8 @@ async function convertBody(html, sourceUrl, downloadImage) {
   return { markdown, firstImage };
 }
 
-export async function importSubstack({ root = process.cwd(), fetchImpl = fetch } = {}) {
-  const response = await fetchResponse(FEED_URL, fetchImpl);
-  const feed = await new Parser().parseString(await response.text());
+export async function importSubstack({ root = process.cwd(), fetchImpl = fetch, readerIntervalMs = 3_200 } = {}) {
+  const feed = await readFeed(fetchImpl, readerIntervalMs);
   const posts = await readPosts(root);
   const pending = new Map();
   const downloadImage = await imageDownloader(root, fetchImpl, pending);

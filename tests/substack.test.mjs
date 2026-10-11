@@ -8,7 +8,7 @@ import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import { parseHTML } from "linkedom";
-import { FEED_URL, importSubstack } from "../scripts/import-substack.mjs";
+import { FEED_URL, READER_URL, importSubstack } from "../scripts/import-substack.mjs";
 
 const exec = promisify(execFile);
 const repo = fileURLToPath(new URL("../", import.meta.url));
@@ -204,4 +204,51 @@ test("unsafe links are removed and embedded media becomes a link", async (t) => 
   assert.match(body, /bad link/);
   assert.match(body, /mailto:hello@example.com/);
   assert.match(body, /\[View embedded media\]\(https:\/\/www.youtube.com\/embed\/example\)/);
+});
+
+test("HTTP 403 falls back to public reader pages without changing existing imports", async (t) => {
+  const root = await temporaryRepo(t);
+  await importSubstack({ root, ...fetcher(feed([item()])) });
+  const before = await snapshot(root);
+  const link = "https://sukritikapoor15.substack.com/p/first-post";
+  const body = item().match(/<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/)[1];
+  const readerIndex = `<html><body><div><h3><a href="${link}"></a></h3><time>Fri, 09 Oct 2026 23:23:32 GMT</time></div></body></html>`;
+  const readerArticle = `<html><head><meta property="og:title" content="First post"><meta property="og:description" content="A short &amp; useful description"><link rel="canonical" href="${link}"></head>
+    <body><div class="available-content"><div class="body markup">${body}</div></div></body></html>`;
+  const calls = [];
+  const fetchImpl = async (url, options) => {
+    calls.push(url);
+    if (url === FEED_URL) return new Response("Cloudflare challenge", { status: 403 });
+    assert.equal(options.headers["X-Return-Format"], "html");
+    if (url === `${READER_URL}${FEED_URL}`) return new Response(readerIndex);
+    if (url === `${READER_URL}${link}`) return new Response(readerArticle);
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+  assert.deepEqual(await importSubstack({ root, fetchImpl, readerIntervalMs: 0 }), { posts: 1, changedPosts: 0, downloadedImages: 0 });
+  assert.deepEqual(calls, [FEED_URL, `${READER_URL}${FEED_URL}`, `${READER_URL}${link}`]);
+  assert.deepEqual(await snapshot(root), before);
+
+  const brokenReader = async (url, options) => url === `${READER_URL}${link}`
+    ? new Response("<html><body>Could not fetch article</body></html>")
+    : fetchImpl(url, options);
+  await assert.rejects(importSubstack({ root, fetchImpl: brokenReader, readerIntervalMs: 0 }), /did not return the public article/);
+  assert.deepEqual(await snapshot(root), before);
+
+  const malformedIndex = async (url) => url === FEED_URL
+    ? new Response("Blocked", { status: 403 })
+    : new Response("<html><body>Invalid index</body></html>");
+  await assert.rejects(importSubstack({ root, fetchImpl: malformedIndex, readerIntervalMs: 0 }), /no valid feed entries/);
+  assert.deepEqual(await snapshot(root), before);
+});
+
+test("other feed errors do not silently switch to the public reader", async (t) => {
+  const root = await temporaryRepo(t);
+  let calls = 0;
+  const fetchImpl = async (url) => {
+    calls += 1;
+    assert.equal(url, FEED_URL);
+    return new Response("Missing feed", { status: 404 });
+  };
+  await assert.rejects(importSubstack({ root, fetchImpl, readerIntervalMs: 0 }), /HTTP 404/);
+  assert.equal(calls, 1);
 });
