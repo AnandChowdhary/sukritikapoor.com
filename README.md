@@ -29,6 +29,8 @@ Post body goes here.
 
 ## Commands
 
+Use Node.js 24 LTS, matching the build and Substack sync workflows.
+
 ```sh
 npm ci
 npm run import:substack
