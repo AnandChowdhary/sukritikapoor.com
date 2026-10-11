@@ -1,5 +1,6 @@
 import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { marked, Renderer } from "marked";
 
 const SOURCE = "https://sukritikapoor.com";
 const OUT = "dist";
@@ -194,6 +195,30 @@ function markdownToHtml(fromRoute, markdown = "") {
   return html.join("\n");
 }
 
+function substackMarkdownToHtml(fromRoute, markdown) {
+  const renderer = new Renderer();
+  const safeUrl = (value, protocols) => {
+    try {
+      return protocols.includes(new URL(value, SOURCE).protocol) ? href(fromRoute, value) : null;
+    } catch {
+      return null;
+    }
+  };
+  renderer.link = function ({ href: value, title, tokens }) {
+    const label = this.parser.parseInline(tokens);
+    const url = safeUrl(value, ["http:", "https:", "mailto:", "tel:"]);
+    if (!url) return label;
+    return `<a href="${escapeHtml(url)}"${title ? ` title="${escapeHtml(title)}"` : ""}>${label}</a>`;
+  };
+  renderer.image = ({ href: value, title, text }) => {
+    const url = safeUrl(value, ["http:", "https:"]);
+    if (!url) return escapeHtml(text);
+    return `<img src="${escapeHtml(url)}" alt="${escapeHtml(text)}"${title ? ` title="${escapeHtml(title)}"` : ""} loading="lazy">`;
+  };
+  renderer.html = ({ text }) => escapeHtml(text);
+  return marked.parse(markdown, { renderer, async: false });
+}
+
 function formatDate(value) {
   return new Date(value).toLocaleDateString("en", {
     year: "numeric",
@@ -218,7 +243,7 @@ function linkedInIcon() {
   return `<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c.718,0,1.3-.582,1.3-1.3V4.3C21,3.582,20.418,3,19.7,3zM8.339,18.338H5.667v-8.59h2.672v8.59zM7.004,8.574c-.857,0-1.549-.694-1.549-1.548s.691-1.548,1.549-1.548c.854,0,1.547.694,1.547,1.548s-.693,1.548-1.547,1.548zM18.339,18.338H15.67v-4.177c0-.996-.017-2.278-1.387-2.278-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h.037c.356-.675,1.227-1.387,2.526-1.387,2.703,0,3.203,1.779,3.203,4.092v4.711z"/></svg>`;
 }
 
-function layout({ site, route, title, description, bodyClass = "", main }) {
+function layout({ site, route, title, description, canonicalUrl, bodyClass = "", main }) {
   const pageTitle = title === site.title ? title : `${title} - ${site.title}`;
   return `<!doctype html>
 <html lang="en">
@@ -227,6 +252,7 @@ function layout({ site, route, title, description, bodyClass = "", main }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeHtml(description || site.description)}">
+  ${canonicalUrl ? `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">` : ""}
   <link rel="stylesheet" href="${relativeFile(route, "assets/styles.css")}">
 </head>
 <body class="${bodyClass}">
@@ -365,6 +391,7 @@ function postPage(site, post, postsByCategory, categoriesBySlug) {
     route,
     title,
     description: post.data.excerpt || stripMarkdown(post.body).slice(0, 160),
+    canonicalUrl: post.data.canonicalUrl,
     main: `        <article class="content-page article">
           <header class="page-header">
             <p class="eyebrow">${category ? `<a href="${relativeRoute(route, category.route)}">${escapeHtml(category.name)}</a>` : "Post"}</p>
@@ -372,8 +399,9 @@ function postPage(site, post, postsByCategory, categoriesBySlug) {
             <time datetime="${escapeHtml(post.data.date)}">${formatDate(post.data.date)}</time>
           </header>
           <div class="rich-text">
-${markdownToHtml(route, post.body)}
+${post.data.source === "substack" ? substackMarkdownToHtml(route, post.body) : markdownToHtml(route, post.body)}
           </div>
+          ${post.data.source === "substack" ? `<p class="source-attribution">Originally published on <a href="${escapeHtml(post.data.sourceUrl)}">Substack</a>.</p>` : ""}
           <nav class="post-nav" aria-label="Post navigation">
             ${previous ? `<a href="${relativeRoute(route, previous.data.route)}">Previous: ${escapeHtml(previous.data.title)}</a>` : "<span></span>"}
             ${next ? `<a href="${relativeRoute(route, next.data.route)}">Next: ${escapeHtml(next.data.title)}</a>` : "<span></span>"}
